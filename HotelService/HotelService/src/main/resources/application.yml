@@ -7,8 +7,19 @@ spring:
     username: postgres
     password: 123
     driver-class-name: org.postgresql.Driver
+  application:
+    name: HOTEL-SERVICE
 
   jpa:
     hibernate:
-      ddl-auto: update   # create | create-drop | update | validate | none
+      ddl-auto: update
     show-sql: true
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka/

@@ -9,12 +9,13 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
-@Table(name = "hotels")
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@Table(name = "hotels")
 public class Hotel {
+
     @Id
     private String id;
     private String name;
