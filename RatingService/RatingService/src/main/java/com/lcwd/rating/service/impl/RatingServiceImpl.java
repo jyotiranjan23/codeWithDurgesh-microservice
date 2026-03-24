@@ -31,4 +31,10 @@ public class RatingServiceImpl implements RatingService {
     public List<Rating> getAllRatingsByHotelId(String hotelId) {
         return ratingRepository.findByHotelId(hotelId).orElseThrow(() -> new ResourceNotFoundException("No Ratings found with this hotelId: "+hotelId));
     }
+
+    @Override
+    public void deleteRating(String ratingId) {
+        Rating rating = ratingRepository.findById(ratingId).orElseThrow(() -> new ResourceNotFoundException("Rating not found with this id: "+ratingId));
+        ratingRepository.delete(rating);
+    }
 }
