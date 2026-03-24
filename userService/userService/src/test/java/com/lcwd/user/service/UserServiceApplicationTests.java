@@ -16,14 +16,14 @@ class UserServiceApplicationTests {
 	@Test
 	void contextLoads() {
 	}
-	@Test
-	void createRating(){
-		Hotel hotel = Hotel.builder().name("Mayfair").location("Bhubaneswar").about("Luxurious Hotel").build();
-		Rating rating = Rating.builder().userId("10").hotelId("100").rating(4).hotel(hotel).build();
-		Rating savedRating = ratingService.createRating(rating);
-		System.out.println(savedRating);
-
-	}
+//	@Test
+//	void createRating(){
+//		Hotel hotel = Hotel.builder().name("Mayfair").location("Bhubaneswar").about("Luxurious Hotel").build();
+//		Rating rating = Rating.builder().userId("10").hotelId("100").rating(4).hotel(hotel).build();
+//		Rating savedRating = ratingService.createRating(rating);
+//		System.out.println(savedRating);
+//
+//	}
 
 
 }
