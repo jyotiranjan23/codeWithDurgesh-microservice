@@ -1,17 +1,16 @@
 package com.lcwd.user.service.entity;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@Builder
 public class Rating {
     private String ratingId;
     private String userId;
     private String hotelId;
     private int rating;
+    private Hotel hotel;
 }
